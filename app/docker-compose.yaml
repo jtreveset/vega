@@ -4,7 +4,7 @@ services:
 
   wordpress:
     image: wordpress
-    restart: unless-stopped	
+    restart: unless-stopped
     depends_on:
       - wordpressdb
     ports:
@@ -19,7 +19,7 @@ services:
 
   wordpressdb:
     image: mysql:5.7
-    restart: unless-stopped	
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: wpdb
       MYSQL_USER: DATABASE_USER
